@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Аренда вещей</title>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="cards-container">
+    <div class="card">
+      <img src="img/pilesos.webp">
+      <h2>Пылесос</h2>
+      <p>Мощный пылесос для уборки дома. Имеет 3 насадки и HEPA-фильтр для очистки воздуха.</p>
+      <span>500 руб./день</span>
+      <button id="button" class="book-button" onclick="showSuccessMessage()">Бронировать</button>
+      <p id="result"></p>
+    </div>
+    <div class="card">
+      <img src="img/shurup.webp">
+      <h2>Шуруповерт</h2>
+      <p>Электрический шуруповерт для быстрого и точного заворачивания винтов. Имеет 2 скорости и многочисленные насадки.</p>
+      <span>300 руб./день</span>
+      <button id="button1" class="book-button" onclick="showSuccessMessage1()">Бронировать</button>
+      <p id="result1"></p>
+    </div>
+    <div class="card">
+      <img src="img/ps5.webp">
+      <h2>Игровая приставка</h2>
+      <p>Современная игровая приставка с множеством игр и возможностью подключения к интернету. Подходит для любителей видеоигр всех возрастов.</p>
+      <span>700 руб./день</span>
+      <button id="button2" class="book-button" onclick="showSuccessMessage2()">Бронировать</button>
+      <p id="result2"></p>
+    </div>
+    <div class="card">
+        <img src="img/auto.webp">
+        <h2>Игровая приставка</h2>
+        <p>Современная игровая приставка с множеством игр и возможностью подключения к интернету. Подходит для любителей видеоигр всех возрастов.</p>
+        <span>700 руб./день</span>
+        <button id="button3" class="book-button" onclick="showSuccessMessage3()">Бронировать</button>
+        <p id="result3"></p>
+      </div>
+    </div>
+  </body>
+</html>

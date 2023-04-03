@@ -1,0 +1,84 @@
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav li:last-child {
+    margin-right: 0;
+  }
+  .card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  /* стили для изображений в карточках */
+  .card img {
+    max-width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+  }
+
+  /* стили для названия товара */
+  .card h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  /* стили для описания товара */
+  .card p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  /* стили для цены */
+  .card span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f00;
+  }
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .book-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .image-container {
+    position: relative;
+    height: 500px; /* Задайте высоту контейнера */
+    width: 600px;
+    border: 1px solid #000000;
+  }
+  
+  .moving-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px; /* Задайте ширину картинки */
+    height: 100px; /* Задайте высоту картинки */
+  }
