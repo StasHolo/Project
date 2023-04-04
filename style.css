@@ -28,7 +28,7 @@ nav ul {
   /* стили для изображений в карточках */
   .card img {
     max-width: 100%;
-    height: 50%;
+    max-height: 50%;
     margin-bottom: 10px;
   }
 
@@ -54,7 +54,7 @@ nav ul {
   .cards-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    
   }
   .book-button {
     padding: 10px 20px;
