@@ -9,6 +9,7 @@ nav ul {
   nav li {
     display: inline-block;
     margin-right: 10px;
+    padding: 10px 30px;
   }
   
   nav li:last-child {
@@ -69,10 +70,12 @@ nav ul {
     border-radius: 8px;
   }
   .image-container {
-    position: relative;
-    height: 500px; /* Задайте высоту контейнера */
-    width: 600px;
-    border: 1px solid #000000;
+    position: absolute;
+    top: 10%;
+    bottom: 5%;
+    height: 80%; /* Задайте высоту контейнера */
+    width: 99%;
+   
   }
   
   .moving-image {
@@ -82,3 +85,35 @@ nav ul {
     width: 100px; /* Задайте ширину картинки */
     height: 100px; /* Задайте высоту картинки */
   }
+  .banner1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%; /* Задайте высоту картинки */
+  }
+  .banner2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    width: 20%; /* Задайте высоту картинки */
+  }
+  .man-div {
+    position: absolute;
+    top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.second-image{
+  position: absolute;
+  top: 21%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  
+}
+.second-image:hover{
+  
+  top: -20px;
+  transition: top 5s;
+}

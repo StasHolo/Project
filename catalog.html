@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      html, body {
+        height: 100%;
+      }
+  body {
+    background: linear-gradient(to bottom, #ffb0b0, #ffe4e4); 
+  }
+  a {
+  font-family: "Segoe UI Black", sans-serif;
+  font-size: 28px;
+  color: #000000;
+}
+    </style>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -8,15 +21,14 @@
   </head>
   <body>
     <header>
-        <nav>
-          <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="onas.html">О нас</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="cards-container">
     <div class="card">
       <img src="img/pilesos.webp">
@@ -44,12 +56,42 @@
     </div>
     <div class="card">
         <img src="img/auto.webp">
-        <h2>Игровая приставка</h2>
-        <p>Современная игровая приставка с множеством игр и возможностью подключения к интернету. Подходит для любителей видеоигр всех возрастов.</p>
+        <h2>Ааавтомобиль</h2>
+        <p>Пушка гонка. Разгон до сотки за 0,00333333 часа. Своевременная заправка только 92 бензином. Дизель никогда не лили, газ не нюхала. Без пробега по америке.</p>
         <span>700 руб./день</span>
         <button id="button3" class="book-button" onclick="showSuccessMessage3()">Бронировать</button>
         <p id="result3"></p>
       </div>
     </div>
+<script>
+  const buttons = document.querySelectorAll('button');
+
+// Создаем массив, содержащий информацию о нажатии каждой кнопки
+const buttonState = new Array(buttons.length).fill(false);
+
+// Добавляем слушатель событий "click" к каждой кнопке
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    buttonState[index] = true;
+  });
+});
+
+// Функция, которая будет периодически проверять, все ли кнопки на странице были нажаты
+function checkButtonState() {
+  if (buttonState.every(state => state)) {
+    // Если все кнопки были нажаты, показываем уведомление
+    alert('Получено достижение: Усмеритель кнопок!');
+  } else {
+    // Если есть ненажатые кнопки, повторяем проверку через 1 секунду
+    setTimeout(checkButtonState, 1000);
+  }
+}
+
+// Начинаем проверку
+checkButtonState();
+</script>
+
+
+
   </body>
 </html>

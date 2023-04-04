@@ -1,41 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    html, body {
+      height: 100%;
+    }
+body {
+  background: linear-gradient(to bottom, #ffb0b0, #ffe4e4); 
+}
+a {
+  font-family: "Segoe UI Black", sans-serif;
+  font-size: 28px;
+  color: #000000;
+}
+.osnova {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  text-align: center;
+}
+section {
+  color: #000000;
+  font-size: 24px;
+}
+.myclassP{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+  </style>
   <meta charset="UTF-8">
   <title>Аренда вещей</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
   
 </head>
-<body>
+<body  >
   <header>
     <nav>
       <ul>
         <li><a href="#">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="onas.html">О нас</a></li>
       </ul>
     </nav>
   </header>
-  <div id="images-container">
-    <img class="moving-image" src="img/playstation.png">
-    <img class="moving-image" src="img/roll.png">
-    <img class="moving-image" src="img/utyug.png">
-    <img class="moving-image" src="img/pilesos.png">
-    <img class="moving-image" src="img/auto.png">
-    <img class="moving-image" src="img/chainik.png">
+  <div>
+    <img class="banner1" src="img/banner1.png">
+    <img class="banner2" src="img/banner2.png">
   </div>
-  <main>
+  <div class="image-container" id="images-container">
+    <img class="moving-image" src="img/png/playstation.png">
+    <img class="moving-image" src="img/png/roll.png">
+    <img class="moving-image" src="img/png/utyug.png">
+    <img class="moving-image" src="img/png/pilesos.png">
+    <img class="moving-image" src="img/png/auto.png">
+    <img class="moving-image" src="img/png/chainik.png">
+    <img class="moving-image" src="img/png/bolgar.png">
+    <img class="moving-image" src="img/png/divan.png">
+    <img class="moving-image" src="img/png/skate.png">
+    <img class="moving-image" src="img/png/skovoroda.png">
+    <img class="moving-image" src="img/png/stul-1.png">
+    <img class="moving-image" src="img/png/kruzka.png">
+    <img class="moving-image" src="img/png/kurtka.png">
+    <img class="moving-image" src="img/png/tapok.png">
+    <img class="moving-image" src="img/png/velik.png">
+  </div>
+  <div class="osnova">
     <section>
       <h1>Аренда вещей</h1>
-      <p>Мы предлагаем широкий ассортимент вещей для аренды, начиная от мебели и заканчивая техникой.</p>
-      <a href="#" class="btn">Перейти к каталогу</a>
+      <p>Мы предлагаем вам услуги по сдаче ваших вещей в аренду, начиная от мебели и заканчивая техникой.</p>
+      
     </section>
-  </main>
+  </div>
 
-  <footer>
-    <p>&copy; 2023 Аренда вещей</p>
+  <footer >
+    <p class="myclassP">&copy; 2023 Аренда вещей</p>
   </footer>
 </body>
 </html>

@@ -20,34 +20,57 @@ function showSuccessMessage3() {
     document.getElementById("button3").style.display = "none";
            }
 
-           document.addEventListener("DOMContentLoaded", function() {
 
-            var images = document.querySelectorAll('.moving-image');
+
+
+
+         
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  var images = document.querySelectorAll('.moving-image');
+  var container = document.querySelector('#images-container');
             
 
 // Итерируемся по каждому элементу и задаем начальные стили
 images.forEach(function(image) {
   image.style.position = 'absolute';
-  image.style.left = Math.floor(Math.random() * (window.innerWidth - image.width)) + 'px';
-  image.style.top = Math.floor(Math.random() * (window.innerHeight - image.height)) + 'px';
+  image.style.left = Math.floor(Math.random() * (container.offsetWidth - image.width)) + 'px';
+  image.style.top = Math.floor(Math.random() * (container.offsetHeight - image.height)) + 'px';
+  
   
 });
 
-// Устанавливаем интервал для перемещения элементов
-setInterval(function() {
+// Функция для анимации перемещения элементов
+  function moveImages() {
   // Итерируемся по каждому элементу
   images.forEach(function(image) {
+
     // Генерируем новые координаты для перемещения
-    var newLeft = Math.floor(Math.random() * (window.innerWidth - image.width));
-    var newTop = Math.floor(Math.random() * (window.innerHeight - image.height));
+   
+
+    var newLeft = Math.floor(Math.random() * (container.offsetWidth - image.width));
+    var newTop = Math.floor(Math.random() * (container.offsetHeight - image.height));
     
-    
+    //image.style.transition = 'transgorm 1s easy-out';
 
     // Плавно перемещаем элемент
-    image.style.transition = 'all 5s';
-    image.style.transform = 'rotate(' + (Math.floor(Math.random() * 360)) + 'deg)';
+    image.style.transition = 'all 10s';
+    image.style.transform = 'rotate(' + (Math.floor(Math.random() * 360)) + 'deg)'; //крутимся
     image.style.left = newLeft + 'px';
     image.style.top = newTop + 'px';
   });
-}, 4000);
+  setTimeout(moveImages, 6000);
+}
+moveImages();
           });
+
+
+
+
+
+
+
+
+   
